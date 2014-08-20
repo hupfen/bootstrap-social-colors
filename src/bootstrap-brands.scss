@@ -1,4 +1,4 @@
-@import "app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
+//@import "app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 
 @mixin button-variant($color, $background, $border) {
   color: $color;
@@ -117,18 +117,24 @@
 $brand-twitter:         #55acee !default;
 $brand-facebook:        #3b5998 !default;
 $brand-gplus:           #db4437 !default;
+$brand-dribbble:        #ea4c89 !default;
 
 $btn-twitter-color:              #fff !default;
 $btn-twitter-bg:                 $brand-twitter !default;
 $btn-twitter-border:             darken($btn-twitter-bg, 5%) !default;
 
-$btn-facebook-color:              #fff !default;
-$btn-facebook-bg:                 $brand-facebook !default;
-$btn-facebook-border:             darken($btn-facebook-bg, 5%) !default;
+$btn-facebook-color:             #fff !default;
+$btn-facebook-bg:                $brand-facebook !default;
+$btn-facebook-border:            darken($btn-facebook-bg, 5%) !default;
 
-$btn-gplus-color:              #fff !default;
-$btn-gplus-bg:                 $brand-gplus !default;
-$btn-gplus-border:             darken($btn-gplus-bg, 5%) !default;
+$btn-gplus-color:                #fff !default;
+$btn-gplus-bg:                   $brand-gplus !default;
+$btn-gplus-border:               darken($btn-gplus-bg, 5%) !default;
+
+
+$btn-dribbble-color:             #fff !default;
+$btn-dribbble-bg:                $brand-dribbble !default;
+$btn-dribbble-border:            darken($btn-dribbble-bg, 5%) !default;
 
 //.btn, .btn-outline {
 //    transition: all .5s; 
@@ -142,6 +148,9 @@ $btn-gplus-border:             darken($btn-gplus-bg, 5%) !default;
 }
 .btn-google-plus {
   @include button-variant($btn-gplus-color, $btn-gplus-bg, $btn-gplus-border);
+}
+.btn-dribbble {
+  @include button-variant($btn-dribbble-color, $btn-dribbble-bg, $btn-dribbble-border);
 }
 
 //.btn-primary.btn-outline {
