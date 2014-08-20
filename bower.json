@@ -1,0 +1,27 @@
+{
+  "name": "bootstrap-social-colors",
+  "version": "0.0.0",
+  "authors": [
+    "Zoe Landon <zoe@leporidaemedia.com>"
+  ],
+  "description": "An extension of Bootstrap's built-in Brand colors, to include a bunch of social media brand colors.",
+  "main": "/dist/bootstrap-brands.min.css",
+  "keywords": [
+    "bootstrap",
+    "social",
+    "brand",
+    "colors"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass-official": "~3.2.0+1"
+  }
+}

@@ -1,0 +1,180 @@
+@import "app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
+
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+  
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: $background;
+          border-color: $border;
+    }
+  }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+  
+  &.btn-outline {
+    color: $background;
+    background-color: transparent;
+    &:hover,  
+    &:focus,
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+      color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+    }
+    
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+      background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      &,
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+      color: $background;
+        background-color: $color;
+            border-color: $border;
+      }
+    }
+    
+    .badge {
+      color: $color;
+      background-color: $background;
+    }
+  }
+  
+  &.btn-inverse {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+    &:hover,  
+    &:focus,
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+      color: $color;
+      background-color: $background;
+      border-color: $border;
+    }
+    
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+      background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      &,
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+      background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+      }
+    }
+    
+    .badge {
+    color: darken($background, 10%);
+    background-color: $color;
+    }
+  }
+}
+
+$brand-twitter:         #55acee !default;
+$brand-facebook:        #3b5998 !default;
+$brand-gplus:           #db4437 !default;
+
+$btn-twitter-color:              #fff !default;
+$btn-twitter-bg:                 $brand-twitter !default;
+$btn-twitter-border:             darken($btn-twitter-bg, 5%) !default;
+
+$btn-facebook-color:              #fff !default;
+$btn-facebook-bg:                 $brand-facebook !default;
+$btn-facebook-border:             darken($btn-facebook-bg, 5%) !default;
+
+$btn-gplus-color:              #fff !default;
+$btn-gplus-bg:                 $brand-gplus !default;
+$btn-gplus-border:             darken($btn-gplus-bg, 5%) !default;
+
+//.btn, .btn-outline {
+//    transition: all .5s; 
+//}
+
+.btn-twitter {
+  @include button-variant($btn-twitter-color, $btn-twitter-bg, $btn-twitter-border);
+}
+.btn-facebook {
+  @include button-variant($btn-facebook-color, $btn-facebook-bg, $btn-facebook-border);
+}
+.btn-google-plus {
+  @include button-variant($btn-gplus-color, $btn-gplus-bg, $btn-gplus-border);
+}
+
+//.btn-primary.btn-outline {
+//    color: #ccff99;
+//}
+//
+//.btn-success.btn-outline {
+//    color: #5cb85c;
+//}
+//
+//.btn-info.btn-outline {
+//    color: #5bc0de;
+//}
+//
+//.btn-warning.btn-outline {
+//    color: #f0ad4e;
+//}
+//
+//.btn-danger.btn-outline {
+//    color: #d9534f;
+//}
+//
+//.btn-success.btn-outline:hover,
+//.btn-info.btn-outline:hover,
+//.btn-warning.btn-outline:hover,
+//.btn-danger.btn-outline:hover {
+//    color: #fff;
+//}
+//
+//.btn-primary.btn-outline:hover {
+//  color: #222;
+//}
+
+.btn-outline {
+    color: inherit;
+}
