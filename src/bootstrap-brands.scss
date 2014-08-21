@@ -1,5 +1,3 @@
-//@import "app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
-
 @mixin button-variant($color, $background, $border) {
   color: $color;
   background-color: $background;
@@ -112,12 +110,52 @@
     background-color: $color;
     }
   }
+  
+  &.btn-outline.btn-inverse {
+    color: darken($background, 10%);
+    background-color: transparent;
+    border-color: darken($border, 12%);
+    &:hover,  
+    &:focus,
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+      color: $color;
+    background-color: $background;
+    }
+    
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+      background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      &,
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+      color: $color;
+        background-color: $color;
+            border-color: $border;
+      }
+    }
+    
+    .badge {
+      color: $color;
+      background-color: $background;
+    }
+  }
 }
 
 $brand-twitter:         #55acee !default;
 $brand-facebook:        #3b5998 !default;
 $brand-gplus:           #db4437 !default;
 $brand-dribbble:        #ea4c89 !default;
+$brand-github:          #4183c4 !default;
+$brand-hn:              #ff6600 !default;
 
 $btn-twitter-color:              #fff !default;
 $btn-twitter-bg:                 $brand-twitter !default;
@@ -131,14 +169,17 @@ $btn-gplus-color:                #fff !default;
 $btn-gplus-bg:                   $brand-gplus !default;
 $btn-gplus-border:               darken($btn-gplus-bg, 5%) !default;
 
-
 $btn-dribbble-color:             #fff !default;
 $btn-dribbble-bg:                $brand-dribbble !default;
 $btn-dribbble-border:            darken($btn-dribbble-bg, 5%) !default;
 
-//.btn, .btn-outline {
-//    transition: all .5s; 
-//}
+$btn-github-color:               #fff !default;
+$btn-github-bg:                  $brand-github !default;
+$btn-github-border:              darken($btn-github-bg, 5%) !default;
+
+$btn-hn-color:                   #fff !default;
+$btn-hn-bg:                      $brand-hn !default;
+$btn-hn-border:                  darken($btn-hn-bg, 5%) !default;
 
 .btn-twitter {
   @include button-variant($btn-twitter-color, $btn-twitter-bg, $btn-twitter-border);
@@ -151,6 +192,19 @@ $btn-dribbble-border:            darken($btn-dribbble-bg, 5%) !default;
 }
 .btn-dribbble {
   @include button-variant($btn-dribbble-color, $btn-dribbble-bg, $btn-dribbble-border);
+}
+.btn-github {
+  @include button-variant($btn-github-color, $btn-github-bg, $btn-github-border);
+}
+.btn-hacker-news {
+  @include button-variant($btn-hn-color, $btn-hn-bg, $btn-hn-border);
+}
+  .btn-hn {
+    @include button-variant($btn-hn-color, $btn-hn-bg, $btn-hn-border);
+  }
+
+.btn-outline, .btn-outline.btn-inverse {
+    color: inherit;
 }
 
 //.btn-primary.btn-outline {
@@ -183,7 +237,3 @@ $btn-dribbble-border:            darken($btn-dribbble-bg, 5%) !default;
 //.btn-primary.btn-outline:hover {
 //  color: #222;
 //}
-
-.btn-outline {
-    color: inherit;
-}
